@@ -26,4 +26,13 @@ stage('UNIT testing'){
                 }
             }
         }
-        
+         stage('Integration testing'){
+            
+            steps{
+                
+                script{
+                    
+                    sh 'mvn verify -DskipUnitTests'
+                }
+            }
+        }
